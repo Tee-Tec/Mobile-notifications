@@ -8,15 +8,9 @@ fun main() {
 
 
 fun printNotificationSummary(numberOfMessages: Int) {
-    var morningNotification = 51
-    var eveningNotification = 135
-    
-    when (morningNotification) {
-        in 0..100 -> println("You have $morningNotification notifications.")
-        else -> println("Your phone is blowing up! You have 99+ notifications.")
+    if (numberOfMessages < 100) {
+        println("You have ${numberOfMessages} notifications.")
+    } else {
+        println("Your phone is blowing up! You have 99+ notifications.")
     }
-    when (eveningNotification) {
-        in 0..100 -> println("You have $eveningNotification notifications.")
-        else -> println("Your phone is blowing up! You have 99+ notifications.")
-    } 
 }
